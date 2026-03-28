@@ -1,0 +1,20 @@
+{
+	"user": {
+		"name": "morita",
+		"age": 30
+	},
+	"films": [
+	  {
+		"title": "fight club",
+		"rating": 4
+	  },
+      {
+		"title": "shawshank redemption",
+		"rating": 5
+	  },
+	  {
+		"title": "inter stellar",
+		"rating": 5
+	  }
+	]
+}			 
