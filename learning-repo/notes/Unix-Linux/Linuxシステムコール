@@ -1,5 +1,0 @@
-カーネルのソースコード：https://github.com/torvalds/linux/
-システムコールテーブル
-カーネル内の配列で、システムコール番号をインデックスに、対応するカーネル関数のアドレスが格納されている
-x86_64の場合
-arch/x86/entry/syscalls/syscall_64.tbl
