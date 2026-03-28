@@ -1,0 +1,37 @@
+## Sysinternals ツール一覧
+
+### ■ プロセス・監視
+Process Explorer   # 高機能タスクマネージャー
+Process Monitor    # ファイル/レジストリ/プロセス監視
+ProcDump           # プロセスダンプ取得
+
+### ■ 起動・自動実行
+Autoruns           # スタートアップ管理
+LogonSessions      # ログオンセッション確認
+
+### ■ システム情報
+Coreinfo           # CPU情報表示
+RAMMap             # メモリ使用状況可視化
+VMMap              # 仮想メモリ解析
+
+### ■ ファイル・ディスク
+Disk2vhd           # 仮想ディスク作成
+Contig             # ファイル断片化解消
+SDelete            # 安全削除
+
+### ■ セキュリティ・権限
+AccessChk          # アクセス権確認
+AccessEnum         # 権限一覧表示
+
+### ■ ネットワーク
+TCPView            # ポート使用状況GUI版
+PsPing             # 高機能ping
+
+### ■ コマンドライン系
+PsExec             # リモート実行
+PsList             # プロセス一覧
+PsKill             # プロセス終了
+
+### ■ その他
+BgInfo             # デスクトップにシステム情報表示
+ZoomIt             # 画面拡大・描画ツール

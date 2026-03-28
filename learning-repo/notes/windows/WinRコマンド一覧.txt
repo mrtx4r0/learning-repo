@@ -1,0 +1,38 @@
+## Win + R コマンド一覧
+
+### ■ システム・設定
+regedit            # レジストリエディタ<br>
+msconfig           # システム構成<br>
+services.msc       # サービス管理<br>
+control            # コントロールパネル<br>
+settings           # 設定アプリ<br>
+sysdm.cpl          # システムのプロパティ<br>
+winver             # Windowsバージョン確認<br>
+
+### ■ 管理ツール
+taskmgr            # タスクマネージャー<br>
+eventvwr           # イベントビューア<br>
+perfmon            # パフォーマンスモニタ<br>
+resmon             # リソースモニタ<br>
+compmgmt.msc       # コンピュータの管理<br>
+
+### ■ ファイル・ディスク
+explorer           # エクスプローラ<br>
+diskmgmt.msc       # ディスク管理<br>
+cleanmgr           # ディスククリーンアップ<br>
+
+### ■ ネットワーク
+ncpa.cpl           # ネットワーク接続<br>
+inetcpl.cpl        # インターネット設定<br>
+wf.msc             # Windowsファイアウォール<br>
+mstsc              # リモートデスクトップ<br>
+
+### ■ 入力・ユーティリティ
+osk                # オンスクリーンキーボード<br>
+calc               # 電卓<br>
+notepad            # メモ帳<br>
+mspaint            # ペイント<br>
+### ■ 開発・シェル
+cmd                # コマンドプロンプト<br>
+powershell         # PowerShell<br>
+wt                 # Windows Terminal<br>
