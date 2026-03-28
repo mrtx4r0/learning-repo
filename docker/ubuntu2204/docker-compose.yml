@@ -1,0 +1,8 @@
+services:
+  ubuntu2204:
+    build: .
+    image: ubuntu:22.04
+    volumes: 
+     - ./workspace:/workspace
+    stdin_open: true
+    tty: true
