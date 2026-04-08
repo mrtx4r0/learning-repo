@@ -37,10 +37,17 @@ clean:
 |---|---|
 |CC|Cコンパイラ|
 |CFLAGS|Cコンパイラオプション|
+|CXX|C++コンパイラ|
+|CXXFLAGS|C++コンパイラオプション|
 |CPPFLAGS|C/C++のプリプロセッサに渡されるオプション(-I,-Dなど)|
 |LDFLAGS|リンカオプション|
+|MAKE|再帰呼び出し用の make コマンド本体。サブディレクトリで $(MAKE) -C subdir のように使うのが定石|
 |MAKECMDGOALS|コマンドラインで渡されるターゲットリスト|
-|CURDIR|カレントディレクトリの絶対パス|
+|MAKEFLAGS|`-j`, `-k` などのフラグ。再帰 make へ引き継がれる|
+|CURDIR|カレントディレクトリの絶対パス。cdしても不変|
+|MAKEFILE_LIST|読み込まれた Makefile の一覧。$(lastword $(MAKEFILE_LIST)) で「今読んでいる Makefile パス」を取る用途が多い|
+|SHELL|レシピ実行に使うシェル。Windows 環境では意図したシェルに固定する運用が多い|
+|VPATH|依存ファイル探索パス。ソース分離構成で便利|
 ***
 
 # 演算子
@@ -110,11 +117,25 @@ $(addprefix, <prefix>, <list>)
 prefix(文字列)をlistの各要素に付与する
 ***
 
+# ファイルの分割
+大規模プロジェクトでは、ファイルを分割するのが一般的<br>
+* `Makefile`: 入口。ビルド対象・デフォルトターゲット・includeの順序だけを持つ<br>
+* `defs.mak`: ツールチェーン、ディレクトリ、共通フラグなど定数/既定値<br>
+* `rules.mak`: `%.o: %.c` などのパターンルール、リンク手順、依存生成ルール<br>
+* `targets.mak`: 実行ファイル/ライブラリ名、各ターゲットのソース一覧<br>
+* `config/*.mak`: Debug/Release、OS別などの上書き設定<br>
+* `tools/*.mak`: gcc/clang/iarなどコンパイラ別オプション差分<br>
+* `phony.mak`: clean, test, format, help など運用ターゲット<br>
+#### ※インクルード順の例<br>
+defs.mak → tools/\*.mak → config/*.mak → targets.mak → rules.mak → phony.mak<br>
+***
+
 # インクルードでのファイル読み込み
 `include ファイル名`:&ensp;makeはルールの実行前にincludeに遭遇したら、その場でファイルを展開する
 ***
 
 # 出典・参考
+https://www.gnu.org/software/make/manual/ <br>
 [『makeショート入門』](#https://www.amazon.co.jp/make%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E5%85%A5%E9%96%80-TENKAIKEN-ebook/dp/B09BYPMLR7/ref=sr_1_6?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=2CXVYRROTC0RR&dib=eyJ2IjoiMSJ9.bUyQDu9LiWqGUTnkzsLFX3wcg31RHjjmpNfNq1Pi8e1vSNF6AZJBFb71iaY9QHC3KpasbT92ZEO2kcPC8LorBAXzbpNFjSaDYyaDjWOcSwXhJPWnZTTqAAgEwpz1_NSH_8dwb1bR0iK81uXeci09rAEpsVd8EQWi9Au09ko2GPn34gT0VDFll8bG8VRiqOyfuwk4YtJzeE3o6wP-h0d_bcDfJQtILyw52OIklug26JxaUqcBnZKbrwDDi33cpXiL8q3I8TcOGBEGAHhQ7xBgrxUMSX3-maBE2NQZMVPSKnw.mD-oXZYPY29C3mg1XBqShm9APDfwsVvsjXLT-gT5r7I&dib_tag=se&keywords=make&qid=1769862483&sprefix=make%2Caps%2C224&sr=8-6)
 
 https://www.ecoop.net/coop/translated/GNUMake3.77/make_9.jp.html
