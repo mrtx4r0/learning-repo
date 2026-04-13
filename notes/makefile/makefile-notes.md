@@ -134,6 +134,25 @@ defs.mak → tools/\*.mak → config/*.mak → targets.mak → rules.mak → pho
 `include ファイル名`:&ensp;makeはルールの実行前にincludeに遭遇したら、その場でファイルを展開する
 ***
 
+# マクロを利用した関数の自作
+* `define`で、関数のような処理をマクロ定義する
+* `$(call ...)`で定義したマクロ関数を呼び出す
+という仕組みを利用する
+
+```makefile
+# windows環境で使用する、DOS版のrealpathを自作する
+# マクロ定義
+ifeq ($(OS), Windows_NT)
+define realdospath
+$(shell echo $(realpath $(1)) | sed -e 's%/\([a-zA-Z]\)/%\1:/%')
+endef
+
+# マクロ関数呼び出し側
+SRCNAME = $(call realdospath <変換したいパス>)
+```
+ポイント<br>
+* `call`する側で引数を指定すると、関数側は`$(1)`, `$(2)`... でそれを受け取れる
+* 
 # 出典・参考
 https://www.gnu.org/software/make/manual/ <br>
 [『makeショート入門』](#https://www.amazon.co.jp/make%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E5%85%A5%E9%96%80-TENKAIKEN-ebook/dp/B09BYPMLR7/ref=sr_1_6?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=2CXVYRROTC0RR&dib=eyJ2IjoiMSJ9.bUyQDu9LiWqGUTnkzsLFX3wcg31RHjjmpNfNq1Pi8e1vSNF6AZJBFb71iaY9QHC3KpasbT92ZEO2kcPC8LorBAXzbpNFjSaDYyaDjWOcSwXhJPWnZTTqAAgEwpz1_NSH_8dwb1bR0iK81uXeci09rAEpsVd8EQWi9Au09ko2GPn34gT0VDFll8bG8VRiqOyfuwk4YtJzeE3o6wP-h0d_bcDfJQtILyw52OIklug26JxaUqcBnZKbrwDDi33cpXiL8q3I8TcOGBEGAHhQ7xBgrxUMSX3-maBE2NQZMVPSKnw.mD-oXZYPY29C3mg1XBqShm9APDfwsVvsjXLT-gT5r7I&dib_tag=se&keywords=make&qid=1769862483&sprefix=make%2Caps%2C224&sr=8-6)
