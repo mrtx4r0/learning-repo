@@ -130,6 +130,20 @@ $(addprefix, <prefix>, <list>)
 prefix(文字列)をlistの各要素に付与する
 ***
 
+# 依存関係(prerequiisites)の種類
+依存関係行で、記号`|`の左側にあるか右側にあるかで依存関係の種類が異なる
+```makefile
+targets : normal-prerequisites | order-only-prerequisites
+```
+* `|` の左側 → 通常の依存関係<br>
+* `|` の右側 → 順序のみの依存関係 : ターゲット生成前に作られていることを必要とする。ただし、ターゲットよりタイムスタンプが新しくてもターゲットは生成されない<br>
+例<br>
+```makefile
+$(OBJDIR)/%.o: $(PRJ_ROOT)/%.c | $(OBJDIR)
+    $(CC) $(CFLAGS) -o $@ $^
+```
+
+
 # ファイルの分割
 大規模プロジェクトでは、ファイルを分割するのが一般的<br>
 * `Makefile`: 入口。ビルド対象・デフォルトターゲット・includeの順序だけを持つ<br>
