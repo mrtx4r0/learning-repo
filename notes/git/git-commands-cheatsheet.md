@@ -14,6 +14,11 @@
 |チェックアウトしているブランチの追跡ブランチを設定する|git branch -u origin/main|
 |チェックアウトしているブランチの追跡ブランチを設定する|git branch -u origin/feature||
 
+# git checkout
+|操作|コマンド|備考|
+|---|---|---|
+|ブランチ"work"を作成 & タグ "init_tag" をチェックアウトする|git checkout -b work init_tag|
+
 # git switch
 |操作|コマンド|備考|
 |---|---|---|
