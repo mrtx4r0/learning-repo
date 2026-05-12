@@ -48,7 +48,7 @@
 * `HDLC`をベースに開発された
 * プロトコルフィールド（ProtocolType）があるためIP,IPXなど複数プロトコルを使用した環境をサポート
 * PPPはオプションとして、**認証**、**圧縮**、**マルチリンク**、**エラー制御***をサポート
-* `LCP `(Link Control Protocol) と `NCP`（Network Control Protocol）の2つのプロトコルから構成される
+* `LCP`(Link Control Protocol) と `NCP`（Network Control Protocol）の2つのプロトコルから構成される
 * **LCP、NCPはPPPフレームのペイロード(データ)部分に入る(=カプセル化される)**
 * PPPの接続は、以下の順で行われる
   * ① `LCP`におけるリンク確立
@@ -82,9 +82,14 @@ https://milestone-of-se.nesuke.com/nw-basic/ppppppoe/ppp-summary/<br>
 
 ## その他データリンク
 ### FDDI
-* トークンパッシング方式(アペンドトークン方式)
+* **トークンパッシング方式(アペンドトークン方式)**
 ### ATM
+* Asynchronous Transfer Mode
+* 53オクテットの固定長(セルという単位)でデータを伝送する。固定長のため高速
 ### IEEE1394
+* 高速シリアルバス
+* ほぼUSBにとって代わられた
 ### HDMI
+* バージョン1.4でイーサネットフレームをデする規格が追加されたことにより、HDMIケーブルでTCP IP通信が可能となった。ただしネットワーク用途での使用は少ない。
 
 
