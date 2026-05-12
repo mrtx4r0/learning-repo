@@ -80,8 +80,11 @@ https://symphonict.nesic.co.jp/workingstyle/netswireless/about_isdn/
 https://www.infraexpert.com/study/wan6.html<br>
 https://milestone-of-se.nesuke.com/nw-basic/ppppppoe/ppp-summary/<br>
 
-### その他データリンク
-* FDDI
-
+## その他データリンク
+### FDDI
+* トークンパッシング方式(アペンドトークン方式)
+### ATM
+### IEEE1394
+### HDMI
 
 
