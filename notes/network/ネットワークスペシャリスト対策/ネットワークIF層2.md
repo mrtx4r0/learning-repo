@@ -19,6 +19,17 @@ LAN同士を接続する主な装置・技術
   ```bash
   $ ethtool eth0(デバイス名)
   ```
+* **Automatic MDI/MDI-X**<br>
+  前提<br>
+  * ストレートケーブル/クロスケーブル
+    * 外見はほぼ同じ。RJ45コネクタを見ればわかる
+  https://qa.elecom.co.jp/sp/faq_detail.html?id=6543
+  * MDI/MDI-X(UTPケーブルを接続するポートの違い)<br>
+  どういう技術か？<br>
+　
+* **リンクアグリゲーション**
+  *
+  *
 
 ## VLAN（Virtual LAN）
 ※前提<br>
