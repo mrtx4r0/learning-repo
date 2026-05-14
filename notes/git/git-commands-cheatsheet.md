@@ -4,6 +4,7 @@
 |ユーザ名を設定する|git config --global user.name "USERNAME"|globalスコープはユーザ全体|
 |メールアドレスを設定する|git config --global user.email "ADDRESS"|
 |設定一覧を出力|git config --list|system, global, local全スコープの設定一覧を出す。スコープをしぼりたければ、--global等つける|
+|制御文字や非ASCIIをエスケープ表記せずに出力する（デフォルトはエスケープ表記）|git config --global core.quotepath false|
 
 # git branch
 |操作|コマンド|備考|
