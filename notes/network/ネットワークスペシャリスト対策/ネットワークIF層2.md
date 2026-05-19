@@ -44,8 +44,11 @@ LAN同士を接続する主な装置・技術
 * スイッチでの物理的な接続形態とは独立して、**仮想的なLANセグメントを作る**技術
 * VLANを使用することで、L2スイッチでルータやL3スイッチのようにブロードキャストドメインを分割することが可能
 * スイッチのポートごとに**VLAN ID**を設定することで、同じIDごとにLANセグメント化することが可能
-* VLAN ID
+    (同じ192.0.2.0/24のネットワーク内でも、VLAN IDを分けて分割できる）<br>
 * 業務用途では、VLAN対応のスイッチングハブの使用が主流（部署間などでネットワークを分けたいため）
-* 
+* VLANの設定は、手動（コマンド）でやるスタティックVLAN、動的にやるダイナミックVLANがある
 
-https://www.infraexpert.com/study/vlanz1.htmlの説明がわかりやすい<br>
+https://www.infraexpert.com/study/vlanz1.html<br>
+の説明がわかりやすい<br>
+VLANについてより詳しい知識は、以下を参照<br>
+infraexpert.com/study/vlanz2.html<br>
