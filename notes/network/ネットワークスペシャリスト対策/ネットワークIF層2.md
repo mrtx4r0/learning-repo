@@ -51,4 +51,4 @@ LAN同士を接続する主な装置・技術
 https://www.infraexpert.com/study/vlanz1.html<br>
 の説明がわかりやすい<br>
 VLANについてより詳しい知識は、以下を参照<br>
-infraexpert.com/study/vlanz2.html<br>
+https://www.infraexpert.com/study/vlanz2.html<br>
