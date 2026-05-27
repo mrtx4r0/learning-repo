@@ -43,7 +43,7 @@ int WINAPI WinMain(
     /* 戻り値はウィンドウハンドル */
     HWND hwnd = CreateWindowEx(
         0,
-        CLASS_NAME,
+        CLASS_NAME,      /* クラス名にはlpszClassNameに設定したクラス名を指定 */
         "My First 32 Window",
         WS_OVERLAPPEDWINDOW,
         CW_USEDEFAULT, CW_USEDEFAULT,
