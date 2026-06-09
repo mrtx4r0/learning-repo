@@ -15,3 +15,7 @@ End Function
 ### 引数
 値渡し: ByVal
 参照渡し: ByRef
+
+### ファイル読込
+Open FilePath For Input As #1
+    Line Input #1, buf
