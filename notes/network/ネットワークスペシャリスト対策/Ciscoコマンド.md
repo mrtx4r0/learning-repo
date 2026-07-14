@@ -8,4 +8,5 @@ https://www.infraexpert.com/study/routing3.html
 https://www.infraexpert.com/study/routing5.html
 
 #### ルータで実際に現在接続されているシリアルケーブルの規格を確認する
-`show controllers`
+`show controllers`<br>
+https://www.infraexpert.com/study/wan2.html<br>
