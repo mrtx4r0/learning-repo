@@ -4,7 +4,8 @@
 * `Ctrl+1`: ターミナルからエディタに移動
 * `Ctrl+k, v`: マークダウンファイルを編集しながらプレビューする
 * `Ctrl + PageDown/PageUp`: (Windows)タブ移動
-
+* `Alt + ↑/↓` : (Windows)選択行のテキストを行ごと移動する
+* 
 ## ユーザ設定
 * Windowsの場合
   %APPDATA%\Code\User\にsettings.jsonを置く
