@@ -83,7 +83,14 @@ https://milestone-of-se.nesuke.com/nw-basic/ppppppoe/ppp-summary/<br>
 
 ## その他データリンク
 ### FDDI
-* **トークンパッシング方式(アペンドトークン方式)**
+* Fiber Distributed Data Interface
+* 光ファイバーケーブルを使用した高速LAN
+* 100Mbps
+* 1980年代〜1990年代に、企業や大学内LANで採用された。
+* 現在はイーサネットにほぼとって代わられたと考えてよい(**現在の光ファイバーLANの主流はイーサネット**)
+* アクセス制御方式は**トークンパッシング方式(アペンドトークン方式)**<br>
+  ※つまりCSMA/CDではない<br>
+  
 ### ATM
 * Asynchronous Transfer Mode
 * 53オクテットの固定長(セルという単位)でデータを伝送する。固定長のため高速
