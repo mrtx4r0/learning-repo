@@ -18,3 +18,12 @@
   * HTTP1.1を拡張(COPYなどのメソッドを追加)
   * webサーバに対して直接ファイルのコピーや削除が可能
   * httpを使用するのでFTPのようにポートを開けなくていいのがメリット
+
+* MQTT(Message Queuing Telemetry Transport)
+  * TCP/IP上で利用可能な、HTTPよりも軽量・省電力なテキストベースのプロトコル
+  * メッセージ送信側をパブリッシャー、受信側をサブスクライバー、2者間をMQTTサーバが中継する
+  * MQTTサーバがメッセージを保管するため、送信側は受信側の状態意識せずに送れる
+  * IoTに適している
+* CoAP(Constrained Application Protocol)
+  * IoT向けにTCPではくUDPを使用したプロトコル
+  * HTTPに似ており、HTTPリクエストをCoAPリクエストに変換も可能
