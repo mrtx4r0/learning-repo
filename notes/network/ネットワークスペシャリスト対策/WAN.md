@@ -22,3 +22,8 @@ https://www.infraexpert.com/study/wan2.html
       * 専用線
       * ADSL
       * FTTH
+* 主要な通信サービス
+  * **IP-VPN**
+    * 通信事業者がIPネットワーク上に**MPLS**技術を用いてVPNを構築する
+    * **MPLS**(Multiprotocol Label Switching)
+      * IPパケットに**ラベル**という情報を付加し、それを基にしたスイッチングでパケット転送を行う
