@@ -74,8 +74,14 @@
 * 参考文献：https://www.sbcr.jp/product/4815627058/
 
 ## IEEE 802.11以外の無線プロトコル
-* IEEE 802.15で規格をまとめている近距離無線通信
-  * 代表的な規格はBluetooth、BLE、ZigBee、Wi-Sun 
+* **IEEE 802.15**でまとめている近距離無線通信の代表的な規格
+  * Bluetooth
+  * BLE
+  * ZigBee
+    * Bluetoothよりも低速(20Kbps-250kbps)で伝送可能距離も短い(30m程度)ながら、乾電池程度の電力で数年が稼働可能な省電力性と低コストの利点を有する無線通信規格です。理論上の最大接続台数が65,536台とBluetoothと比較して非常に多く、多数の端末間を低コストの無線通信で接続可能な特徴をもつ。
+    * 規格のベース部分にはWPAN(Wireless Personal Area Network)の規格であるIEEE 802.15.4が使用される
+    * 主にIoT(Internet of Things)などによるセンサーネットワークの構築を目的として策定された
+  * Wi-Sun 
 
 ## PPP
 * コネクション型通信。データリンク層だけのプロトコル。
