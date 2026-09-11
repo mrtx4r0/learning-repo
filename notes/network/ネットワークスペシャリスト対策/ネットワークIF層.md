@@ -71,6 +71,13 @@
           * そのセッションキーの情報をもとに、それぞれマスターキーを生成する
   * 共有鍵生成
   * 暗号化通信
+    * WEP(Wired Equivalent Privacy)
+      * セキュリティ問題から現在は非推奨
+      * 暗号化アルゴリズム：**RC4**
+      * SSIDごとにWEPキー(暗号化鍵)を予め設定しておく
+      * 鍵長：40または104bit + **IV**(Initialization Vector、ランダム値)
+    * **WPA**(Wi-Fi Protected Access)
+      * 
 * 規格の変遷
   * 伝送規格
     * IEEE802.11：最初
