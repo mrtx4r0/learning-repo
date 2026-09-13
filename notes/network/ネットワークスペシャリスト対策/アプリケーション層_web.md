@@ -21,6 +21,8 @@
     * 負荷分散
     * キャッシュによる負荷軽減
     * TLS通信も代理させることによる負荷軽減
+* **PAC**(Proxy Auto Config)
+* **WPAD**(Web Proxy Auto-Discovery protocol)
 
 ## webアクセス技術
 * WebDAV
