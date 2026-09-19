@@ -22,3 +22,6 @@ https://www.infraexpert.com/study/wan2.html<br>
   show ip ospf database network
   ```
 * LSAタイプ3の確認<br>
+  ```
+  show ip ospf database summary
+  ```
