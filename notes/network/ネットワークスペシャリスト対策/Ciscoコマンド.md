@@ -15,7 +15,7 @@ https://www.infraexpert.com/study/wan2.html<br>
 * 参考：https://www.infraexpert.com/study/ospfz15.html
 * LSAタイプ１の確認<br>
   ```
-  show ip ospf database
+  show ip ospf database router
   ```
 * LSAタイプ2の確認<br>
   ```
