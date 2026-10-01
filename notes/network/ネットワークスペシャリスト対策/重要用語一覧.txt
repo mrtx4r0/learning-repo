@@ -1,0 +1,681 @@
+【NW午後・穴埋め対策：規格・世代・特徴セット暗記】
+
+■ Ethernet / PoE
+
+IEEE 802.3af → PoE
+・Ethernet経由で電力を供給
+・最大給電電力：約15.4W
+
+IEEE 802.3at → PoE+
+・PoEの高電力版
+・最大給電電力：約30W
+
+IEEE 802.3bt → PoE++ / 4PPoE
+・4ペア全てを利用した給電
+・PoE/PoE+より高電力
+・最大給電電力は規格上のTypeにより約60W/90W級
+
+
+10BASE-T
+・10Mbit/s
+・ツイストペアケーブル
+
+100BASE-TX
+・100Mbit/s
+・Fast Ethernet
+
+1000BASE-T
+・1Gbit/s
+・ツイストペアケーブル
+・4対を利用
+
+2.5GBASE-T
+・2.5Gbit/s
+・マルチギガビットEthernet
+
+5GBASE-T
+・5Gbit/s
+・マルチギガビットEthernet
+
+10GBASE-T
+・10Gbit/s
+・ツイストペアケーブル
+
+
+■ VLAN / LANアクセス制御
+
+IEEE 802.1Q
+・VLAN
+・EthernetフレームにVLANタグを付加
+・VLAN IDを利用
+・トランクポートで複数VLANを伝送する際などに利用
+
+IEEE 802.1X
+・ポートベースのネットワークアクセス制御
+・認証前の端末のネットワークアクセスを制御
+・Supplicant：端末
+・Authenticator：スイッチやAPなど
+・Authentication Server：RADIUSサーバなど
+・EAPを使用
+・LAN上ではEAPOLを使用
+
+EAP
+・PPPで標準化された認証方式の拡張
+・IEEE 802.1Xなどで利用
+
+EAPOL
+・EAP over LAN
+・EAPをLAN上で伝送するためのプロトコル
+
+
+■ 無線LAN
+
+IEEE 802.11n → Wi-Fi 4
+・2.4GHz/5GHz
+・MIMO
+
+IEEE 802.11ac → Wi-Fi 5
+・主に5GHz帯
+・高速化
+・MU-MIMOなど
+
+IEEE 802.11ax → Wi-Fi 6
+・2.4GHz/5GHz
+・高密度環境での効率向上
+・OFDMA
+・MU-MIMO
+
+Wi-Fi 6E
+・IEEE 802.11axをベース
+・6GHz帯を利用
+
+IEEE 802.11be → Wi-Fi 7
+・次世代無線LAN
+・320MHzチャネル幅
+・MLO（Multi-Link Operation）など
+
+
+■ HTTP / Web
+
+HTTP/1.1
+・HTTPの代表的な従来規格
+・TCPを利用
+・Persistent Connection
+
+HTTP/2
+・TCPを利用
+・1本のTCP接続上で複数ストリームを多重化
+・HPACKによるヘッダ圧縮
+・HTTP/1.1より効率的な通信
+
+HTTP/3
+・QUICを利用
+・QUICはUDP上で動作
+・TCPではなくUDPを利用
+・TLS 1.3を統合
+・HTTP/2のTCP由来のHoL blockingを緩和
+
+
+■ TLS / 暗号
+
+TLS 1.2
+・HTTPSなどで利用されるTLSの主要バージョン
+・TCP上で利用されることが一般的
+・暗号スイートによる暗号方式の選択
+
+TLS 1.3
+・TLS 1.2よりハンドシェイクを簡素化
+・暗号スイートを整理
+・0-RTTを利用可能
+・HTTP/3 / QUICでも利用
+
+
+■ IP / ルーティング
+
+IPv4
+・32bitアドレス
+・ARPを利用してIPv4アドレスからMACアドレスを解決
+・ICMPv4
+
+IPv6
+・128bitアドレス
+・ARPは使用しない
+・NDPを利用
+・ICMPv6を利用
+・SLAACによるアドレス自動設定が可能
+
+OSPFv2
+・IPv4向けOSPF
+・リンクステート型IGP
+・エリアを利用
+・Area 0がバックボーンエリア
+
+OSPFv3
+・IPv6向けOSPF
+・IPv6対応版OSPF
+
+
+■ IPsec
+
+IPsec
+・IP層で通信を保護する仕組み
+・VPNなどで利用
+
+AH
+・認証
+・完全性
+・送信元認証
+・暗号化は行わない
+
+ESP
+・暗号化
+・認証
+・完全性
+・IPsec VPNで主に利用される
+
+IKE / IKEv2
+・IPsecのSA確立
+・鍵交換
+・暗号アルゴリズム等のネゴシエーション
+
+IPsec トンネルモード
+・元のIPパケット全体をカプセル化
+・新しいIPヘッダを付加
+・サイト間VPNなどで利用
+
+IPsec トランスポートモード
+・IPヘッダは基本的にそのまま
+・IPペイロード部分を保護
+・ホスト間通信などで利用
+
+
+■ VPN / トンネリング
+
+GRE
+・IP上で別のプロトコルのパケットをカプセル化
+・暗号化機能は基本的に持たない
+・VPNなどで利用
+
+IP-in-IP
+・IPパケットを別のIPパケットでカプセル化
+・IPトンネルを構築
+
+VXLAN
+・Layer 2フレームをUDP/IPでカプセル化
+・L3ネットワーク上にL2ネットワークを構築
+・UDP 4789
+・データセンターなどで利用
+
+MPLS
+・IPアドレスではなくラベルを利用して転送
+・ラベルスイッチング
+・キャリア網などで利用
+
+
+■ DNS
+
+DNS
+・名前解決
+・ドメイン名とIPアドレスなどを対応付ける
+
+Aレコード
+・ホスト名 → IPv4アドレス
+
+AAAAレコード
+・ホスト名 → IPv6アドレス
+
+CNAMEレコード
+・別名 → 正規名
+・CNAMEと他のデータを同じ名前に設定することはできない
+
+NSレコード
+・ドメインの権威DNSサーバを指定
+・委任に利用
+
+MXレコード
+・メール配送先サーバを指定
+
+SRVレコード
+・サービスを提供するホスト・ポートを指定
+・サービスの自動発見などに利用
+
+
+■ DHCP
+
+DHCP
+・IPアドレスなどのネットワーク設定を自動配布
+
+DHCPv4
+・IPv4向けDHCP
+
+DHCPv6
+・IPv6向けDHCP
+・IPv6アドレスやその他の設定情報を配布
+
+
+■ メール
+
+SMTP
+・メール送信・転送
+・基本的にTCPを利用
+
+SMTP Submission
+・メールクライアントからメールサーバへの送信
+・一般にTCP 587番ポート
+
+OP25B
+・Outbound Port 25 Blocking
+・ISPなどが外部へのTCP 25番ポートの直接送信を制限
+・迷惑メール対策
+
+SMTP AUTH
+・SMTPサーバ利用時の認証
+
+
+■ Webアクセス
+
+HTTP CONNECT
+・HTTPプロキシに対してトンネル確立を要求
+・HTTPS通信で利用
+・確立後はクライアントとWebサーバ間のTLS通信をプロキシ経由でトンネル転送
+
+PAC
+・Proxy Auto-Config
+・Webブラウザなどのプロキシ利用方法を自動設定
+・JavaScript形式の設定ファイル
+・URLやホスト名などに応じてDIRECT/PROXYを選択
+
+
+■ VoIP
+
+SIP
+・VoIPの呼制御プロトコル
+・セッションの確立・変更・終了などを制御
+・現在のIP電話で広く利用
+
+H.323
+・VoIPの呼制御などを行うITU-Tのプロトコル体系
+・SIPと同じくVoIPで利用される呼制御方式
+
+RTP
+・音声・映像などのリアルタイムデータを転送
+・UDPと組み合わせて利用されることが多い
+
+RTCP
+・RTPの通信品質などを管理・報告
+
+
+■ ルーティングプロトコル
+
+RIP
+・距離ベクトル型IGP
+・メトリックはホップ数
+・最大15ホップ
+・16は到達不能
+
+OSPF
+・リンクステート型IGP
+・SPF計算
+・コストをメトリックとして利用
+・マルチエリア対応
+
+BGP
+・AS間で経路情報を交換
+・パスベクトル型
+・インターネットのAS間ルーティングで利用
+・TCP 179番ポート
+
+eBGP
+・異なるAS間のBGP
+
+iBGP
+・同一AS内のBGP
+
+
+■ VLAN / ルーティング関連
+
+アクセスポート
+・基本的に1つのVLANに所属
+・通常、端末との接続に利用
+・端末からのフレームは通常タグなし
+
+トランクポート
+・複数VLANのフレームを伝送
+・IEEE 802.1Qタグを利用することが一般的
+・スイッチ間接続などで利用
+
+SVI
+・Switch Virtual Interface
+・L3スイッチ上の論理インターフェース
+・VLANのデフォルトゲートウェイなどに利用
+
+
+■ ネットワークアクセス認証
+
+RADIUS
+・ネットワークアクセス認証などに利用
+・AAA
+  Authentication：認証
+  Authorization：認可
+  Accounting：課金・記録
+
+TACACS+
+・ネットワーク機器の管理者認証などに利用
+・Cisco系環境などで利用
+・TCP 49
+
+
+■ SNMP
+
+SNMP
+・ネットワーク機器の監視・管理
+
+SNMP Manager
+・監視・管理する側
+
+SNMP Agent
+・監視対象機器側
+
+SNMPv1
+・SNMPの初期バージョン
+
+SNMPv2c
+・SNMPv2系
+・コミュニティ名による認証
+・暗号化などのセキュリティ機能は弱い
+
+SNMPv3
+・認証・暗号化などのセキュリティ機能を強化
+
+
+■ 時刻同期
+
+NTP
+・Network Time Protocol
+・コンピュータやネットワーク機器の時刻同期
+
+PTP
+・Precision Time Protocol
+・高精度な時刻同期
+・IEEE 1588
+
+
+■ ネットワーク冗長化
+
+STP
+・Spanning Tree Protocol
+・Layer 2ネットワークのループを防止
+・IEEE 802.1D
+
+RSTP
+・Rapid Spanning Tree Protocol
+・STPの高速収束版
+・IEEE 802.1w
+
+MSTP
+・Multiple Spanning Tree Protocol
+・複数VLANをまとめてスパニングツリーで管理
+・IEEE 802.1s
+
+
+■ リンクアグリゲーション
+
+LAG
+・複数の物理リンクを1つの論理リンクとして扱う
+
+LACP
+・Link Aggregation Control Protocol
+・リンクアグリゲーションの自動構成・管理
+・IEEE 802.1AX
+
+
+■ QoS
+
+DiffServ
+・Differentiated Services
+・IPパケットのDSCP値などを利用してQoS制御
+
+DSCP
+・IPヘッダのQoS関連フィールド
+・IPv4ではTOSフィールド、IPv6ではTraffic Classに含まれる
+
+IntServ
+・Integrated Services
+・フロー単位でQoSを保証する考え方
+
+RSVP
+・Resource Reservation Protocol
+・帯域などのリソース予約
+・IntServと関連
+
+
+■ IoT / LPWA
+
+LTE-M
+・LTEを利用したIoT向け通信
+・比較的高速
+・移動体通信にも対応
+
+NB-IoT
+・狭帯域IoT向け
+・低消費電力
+・少量データ通信向け
+
+LoRaWAN
+・LPWA
+・長距離・低消費電力
+・免許不要帯域を利用する方式の一つ
+
+LPWA
+・Low Power Wide Area
+・低消費電力
+・広域通信
+・IoT向け
+
+
+■ SDN
+
+SDN
+・Software Defined Networking
+・ネットワーク制御をソフトウェアで集中管理する考え方
+
+OpenFlow
+・SDNで利用される代表的なプロトコル
+・コントローラとスイッチ間でフロー制御情報を交換
+
+SDN Controller
+・ネットワークの制御情報を集中管理
+・コントロールプレーンを担う
+
+
+■ セキュリティ
+
+IDS
+・Intrusion Detection System
+・侵入検知
+・攻撃を検知して管理者などに通知
+・基本的に通信を遮断する装置ではない
+
+IPS
+・Intrusion Prevention System
+・侵入防止
+・攻撃を検知して通信を遮断することが可能
+
+WAF
+・Web Application Firewall
+・HTTP/HTTPSなどのWebアプリケーション通信を検査
+・SQLインジェクション、XSSなどへの対策
+
+ファイアウォール
+・IPアドレス、ポート番号、プロトコルなどを基に通信を制御
+
+UTM
+・複数のセキュリティ機能を統合した装置
+
+
+■ 認証・暗号
+
+公開鍵暗号方式
+・公開鍵と秘密鍵のペアを利用
+・暗号化／復号
+・電子署名
+
+共通鍵暗号方式
+・同じ秘密鍵を暗号化・復号に利用
+・公開鍵暗号より高速
+
+電子署名
+・送信者認証
+・改ざん検出
+・否認防止
+・通常、ハッシュ＋公開鍵暗号を利用
+
+ハッシュ
+・任意長のデータから固定長の値を生成
+・改ざん検出などに利用
+
+PKI
+・Public Key Infrastructure
+・公開鍵基盤
+・電子証明書
+・認証局（CA）
+・CRL/OCSP
+
+
+■ 認証プロトコル
+
+Kerberos
+・チケットベースの認証
+・KDCを利用
+・ASとTGSなどで構成
+・主に企業内ネットワークなどで利用
+
+LDAP
+・ディレクトリサービスへのアクセスプロトコル
+・ユーザー情報や組織情報などを管理
+
+SAML
+・XMLベースの認証・認可情報交換
+・SSOなどで利用
+
+OAuth 2.0
+・認可のためのフレームワーク
+・「ユーザー本人の認証」そのものではなく、リソースへのアクセス権を委譲する仕組み
+
+OpenID Connect
+・OAuth 2.0をベースにした認証の仕組み
+・IDトークンを利用
+
+
+■ ファイル転送・リモートアクセス
+
+FTP
+・ファイル転送
+・制御用TCP 21
+・データ転送用TCP 20（アクティブモードの場合）
+
+SFTP
+・SSH上でファイル転送
+・FTPとは別プロトコル
+
+FTPS
+・TLSで保護したFTP
+・SFTPとは別物
+
+SSH
+・Secure Shell
+・暗号化されたリモートログイン
+・TCP 22
+
+Telnet
+・リモートログイン
+・通信内容は基本的に平文
+・TCP 23
+
+
+■ ネットワーク管理・探索
+
+LLDP
+・IEEE 802.1AB
+・隣接ネットワーク機器の情報を交換
+・機器の接続関係の把握などに利用
+
+RMON
+・Remote Network Monitoring
+・ネットワーク監視情報を収集
+
+ARP
+・IPv4アドレス → MACアドレスの解決
+
+NDP
+・IPv6でARPに相当する機能
+・ICMPv6を利用
+・近隣ノード探索
+・ルータ探索
+・アドレス解決など
+
+
+■ 特に「正式名称＋規格番号」をセットにするもの
+
+IEEE 802.3af = PoE
+IEEE 802.3at = PoE+
+IEEE 802.3bt = PoE++ / 4PPoE
+
+IEEE 802.1Q = VLAN
+IEEE 802.1X = ポートベースアクセス制御
+IEEE 802.1D = STP
+IEEE 802.1w = RSTP
+IEEE 802.1s = MSTP
+IEEE 802.1AX = LACP
+IEEE 802.1AB = LLDP
+
+IEEE 802.11n = Wi-Fi 4
+IEEE 802.11ac = Wi-Fi 5
+IEEE 802.11ax = Wi-Fi 6
+IEEE 802.11be = Wi-Fi 7
+
+IEEE 1588 = PTP
+
+
+■ 最低限ここだけ暗記
+
+802.3af → PoE
+802.3at → PoE+
+802.3bt → PoE++ / 4PPoE
+
+802.1Q → VLAN
+802.1X → 認証
+802.1D → STP
+802.1w → RSTP
+802.1s → MSTP
+802.1AX → LACP
+802.1AB → LLDP
+
+802.11n → Wi-Fi 4
+802.11ac → Wi-Fi 5
+802.11ax → Wi-Fi 6
+802.11be → Wi-Fi 7
+
+HTTP/2 → TCP + 多重化
+HTTP/3 → QUIC + UDP
+
+OSPFv2 → IPv4
+OSPFv3 → IPv6
+
+TLS 1.2 → TLS
+TLS 1.3 → 改良されたTLS
+
+IPv4 → 32bit + ARP
+IPv6 → 128bit + NDP
+
+IPsec → AH / ESP / IKE
+ESP → 暗号化・認証
+IKE → SA確立・鍵交換
+
+BGP → AS間
+eBGP → 異なるAS間
+iBGP → 同一AS内
+
+WAF → Webアプリ攻撃対策
+IDS → 検知
+IPS → 検知＋防御
