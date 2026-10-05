@@ -7,4 +7,4 @@ https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000dict-att/2019r01a_nw_pm1_
 設問2 [LAN通信制限方法の検討]
 (1) 手動でIPアドレスを設定すれば、不正なPCでもLANに接続できる問題　△「正常PC以外」が正しい
 (2) DHCPサーバが通信できるようにする設定 ✗ DHCPスヌーピングの機能の1つとして、不正なDHCPサーバを接続できないようにする（untrustedポート設定）を押さえておく
-(3) a:エ b:ア c:エ d: ウ
+(3) a:エ b:ア c:エ d: オ
