@@ -1,0 +1,7 @@
+https://www.ipa.go.jp/shiken/mondai-kaiotu/ug65p90000000ye5-att/2014h26a_nw_pm2_qs.pdf
+
+問1
+設問3 []
+⑴ PCとWebサーバとの間
+⑵プロキシサーバを認証するルート証明書
+⑶プロキシサーバは暗号化されたプリマスタシークレットを復号できないから（34字）　✕分からなかった（ネスぺイージス：https://www.infraexpert.com/study/security7.htmlを見て回答）
