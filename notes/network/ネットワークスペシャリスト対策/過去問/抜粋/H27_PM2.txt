@@ -1,4 +1,4 @@
-https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000gxj0-att/2015h27a_nw_pm2_qs.pdf
+問題：https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000gxj0-att/2015h27a_nw_pm2_qs.pdf
 
 問2
 設問3 [IPSecを利用する顧客への対応策]
@@ -6,3 +6,5 @@ IPSecとNATの問題
 (1) IPパケットはAHの認証対象に含まれるため、IPアドレス変換によって認証情報も変化するから　△認証情報が変化し、計算値が一致しなくなる
 (2) ESPによってポート番号が暗号化されることにより、NAT機器ではポート番号を見られないから
 (3) 送信元ポート番号が500以外であるUDP通信を許可する変更（29）　△500と4500以外
+
+解答：https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000gxj0-att/2015h27a_nw_pm2_ans.pdf
