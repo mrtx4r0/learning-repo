@@ -1,4 +1,18 @@
 https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000f01f-att/2018h30a_nw_pm1_qs.pdf
+設問1
+⑴ ア：フォワード　イ：リバース
+⑵ 利用者のログイン履歴
 
+設問2
+⑴
+メソッド名：CONNECT
+対策：
+⑵ ウ：プロキシサーバのルート証明書
 
+設問3
+⑴ エ：コントロール
+⑵
+⑶
+⑷
+⑸
 解答：https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000f01f-att/2018h30a_nw_pm1_ans.pdf
