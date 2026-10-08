@@ -1,18 +1,26 @@
 https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000f01f-att/2018h30a_nw_pm1_qs.pdf
-設問1
+設問1　プロキシサーバ、SDWAN
 ⑴ ア：フォワード　イ：リバース
 ⑵ 利用者のログイン履歴
 
 設問2
 ⑴
 メソッド名：CONNECT
-対策：
+対策：？？？
 ⑵ ウ：プロキシサーバのルート証明書
 
 設問3
 ⑴ エ：コントロール
-⑵
-⑶
-⑷
-⑸
+⑵ デフォルトルートのネクストホップを本社SD-WANルータに設定する（33）
+⑶ SD-WANコントローラ
+⑷ G社SaaSへの通信（10）
+⑸ 
+・社内PCからG社SaaSへのアクセスはプロキシサーバを経由しないから（34）
+・？？
+
 解答：https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000f01f-att/2018h30a_nw_pm1_ans.pdf
+
+SDWANルータのWAN側は、他のSDWANルータへ接続するIPsecVPNの論理IFがある
+社内PC→G社SaaSへのアクセス；SDWANルータを経由（プロキシは経由しない）
+社内PC→G社SaaS以外のインターネット：プロキシを経由
+
