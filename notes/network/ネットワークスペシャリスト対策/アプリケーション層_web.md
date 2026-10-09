@@ -38,3 +38,7 @@
 * CoAP(Constrained Application Protocol)
   * IoT向けにTCPではくUDPを使用したプロトコル
   * HTTPに似ており、HTTPリクエストをCoAPリクエストに変換も可能
+
+# 様々なプロトコルなどを利用したサービス・技術
+* グループウェア
+  * GroupSessionなど
