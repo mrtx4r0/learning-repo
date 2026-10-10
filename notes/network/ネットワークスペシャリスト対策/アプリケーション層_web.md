@@ -13,6 +13,7 @@
   * チャットなどで使われる技術
 
 ## プロキシ
+* 基本：https://www.infraexpert.com/study/security23.html
 * プロキシサーバ
   * クライアント側に置かれるプロキシ
 * リバースプロキシサーバ
@@ -31,7 +32,10 @@
       * MD5やSHA256でハッシュ化して送信する
 * **PAC**(Proxy Auto Config)
 * **WPAD**(Web Proxy Auto-Discovery protocol)
-
+* プロキシサーバを介したSSL（TLS）通信
+  * 以下が参考になる
+    * https://www.ipa.go.jp/shiken/mondai-kaiotu/ug65p90000000ye5-att/2014h26a_nw_pm2_qs.pdf のp6の図3
+    * https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000f01f-att/2018h30a_nw_pm1_qs.pdf のp3 \[G社SaaSの試用\]
 ## webアクセス技術
 * WebDAV
   * HTTP1.1を拡張(COPYなどのメソッドを追加)
