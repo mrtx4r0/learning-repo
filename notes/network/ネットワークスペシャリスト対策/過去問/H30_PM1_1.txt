@@ -1,25 +1,28 @@
 https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000f01f-att/2018h30a_nw_pm1_qs.pdf
 設問1　プロキシサーバ、SDWAN
 ⑴ ア：フォワード　イ：リバース
-⑵ 利用者のログイン履歴
+⑵ 利用者のログイン履歴　✗ 利用者ID
 
 設問2
 ⑴
 メソッド名：CONNECT
-対策：？？？
+対策：？？？　✗ HTTPS以外のポート宛てのCONNECTを拒否する
 ⑵ ウ：プロキシサーバのルート証明書
 
 設問3
 ⑴ エ：コントロール
-⑵ デフォルトルートのネクストホップを本社SD-WANルータに設定する（33）
+⑵ デフォルトルートのネクストホップを本社SD-WANルータに設定する（33）△問われているのは『経路情報」なので書き方がまずい
 ⑶ SD-WANコントローラ
-⑷ G社SaaSへの通信（10）
+⑷ G社SaaSへの通信（10）△HTTPS通信
 ⑸ 
 ・社内PCからG社SaaSへのアクセスはプロキシサーバを経由しないから（34）
-・？？
+・？？　✗ 出張先PCからG社SaaSへのアクセスログを取得する必要があるから（33）　
+　↑ヒントは、図2の「出張先PC」の記載と、p3の「出張先のPCから直接G社SaaSを利用できるように..」の記述
 
 解答：https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000f01f-att/2018h30a_nw_pm1_ans.pdf
+採点講評：https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000f01f-att/2018h30a_nw_pm1_cmnt.pdf
 
+＜回答時メモ＞
 SDWANルータのWAN側は、他のSDWANルータへ接続するIPsecVPNの論理IFがある
 社内PC→G社SaaSへのアクセス；SDWANルータを経由（プロキシは経由しない）
 社内PC→G社SaaS以外のインターネット：プロキシを経由
