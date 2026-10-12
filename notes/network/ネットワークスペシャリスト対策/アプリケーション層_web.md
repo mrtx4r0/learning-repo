@@ -31,6 +31,7 @@
     * **Digest認証**
       * MD5やSHA256でハッシュ化して送信する
 * **PAC**(Proxy Auto Config)
+  * PACの記述例：https://www.ipa.go.jp/shiken/mondai-kaiotu/m42obm000000afqx-att/2024r06h_nw_pm1_qs.pdf のp19-図4
 * **WPAD**(Web Proxy Auto-Discovery protocol)
 * プロキシサーバを介したSSL（TLS）通信
   * 以下が参考になる
