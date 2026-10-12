@@ -31,8 +31,16 @@
     * **Digest認証**
       * MD5やSHA256でハッシュ化して送信する
 * **PAC**(Proxy Auto Config)
-  * PACの記述例：https://www.ipa.go.jp/shiken/mondai-kaiotu/m42obm000000afqx-att/2024r06h_nw_pm1_qs.pdf のp19-図4
+  * PACの記述例：[NW_R6_PM1](https://www.ipa.go.jp/shiken/mondai-kaiotu/m42obm000000afqx-att/2024r06h_nw_pm1_qs.pdf)のp19-図4
 * **WPAD**(Web Proxy Auto-Discovery protocol)
+  * **DHCP**、**DNS**の機能を利用して、PACファイルの場所を配布するプロトコル([NW_R6_PM1](https://www.ipa.go.jp/shiken/mondai-kaiotu/m42obm000000afqx-att/2024r06h_nw_pm1_qs.pdf) の20ページ \[WPAD\]の導入検討
+  * **DHCPを使う方法**
+    * PCのIPアドレス割り当て方法がDHCPによる自動取得である場合にPACファイルを取得可能
+    * 事前にDHCPサーバのオプションとしてWPADのパラメータにPACファイルのURLを設定する
+    * PC側は、ブラウザでプロキシ設定を自動検出する設定にしておく<br>
+    * 上記設定により、PCの起動時にDHCPによりPACファイルのURLを取得し、ブラウザ起動時に（取得済みの）PACファイルURLに対して、HTTPでPACファイルを取得できる
+  * **DNSを使う方法**
+    * PCのIPアドレス割り当てが固定の場合、DNSを使用
 * プロキシサーバを介したSSL（TLS）通信
   * 以下が参考になる
     * https://www.ipa.go.jp/shiken/mondai-kaiotu/ug65p90000000ye5-att/2014h26a_nw_pm2_qs.pdf のp6の図3
