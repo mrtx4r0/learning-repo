@@ -25,3 +25,5 @@ https://www.infraexpert.com/study/wan2.html<br>
   ```
   show ip ospf database summary
   ```
+
+参考：https://qiita.com/k-yasuhiro/items/aede8bf0ce31665cc18e
