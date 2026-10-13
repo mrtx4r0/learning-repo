@@ -37,9 +37,10 @@
   * 宛先MACアドレス: 48bit
   * 送信元MACアドレス: 48bit
   * タイプ(EtherType): 16bit。上位層(ネットワーク層)のプロトコルが何であるかを示すフィールド。
-    * 0800: Ipv4
-    * 0806: ARP
-    * 86DD: Ipv6
+    * `0x0800`: Ipv4
+    * `0x0806`: ARP
+    * `0x8100`: IEEE 802.1q
+    * `0x86DD`: Ipv6
   * FCS: 16bit<br>
 ※IEEE802.3として標準化されたフレームフォーマットは、EtherTypeではなく、Length(データ長を示す)/LLC
 /SNAP(用途はEtherTypeと同じ)のフィールドを持つが、実装として主流なのはEthernetⅡの方。IEEE802.3はどちらのフレームフォーマットも許容している)
